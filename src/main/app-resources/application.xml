@@ -14,7 +14,7 @@
       </defaultJobconf>
     </jobTemplate>
   </jobTemplates>
-  <workflow id="participant-c" title="Participant C" abstract="Participant C does Ocean color atmospheric correction using Seadas">
+  <workflow id="participant-d" title="Participant D" abstract="Participant D does Ocean color atmospheric correction using Seadas with default atm aux products">
     <workflowVersion>1.0</workflowVersion>
     <node id="node_seadas">
       <job id="seadas" />
