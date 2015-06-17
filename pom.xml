@@ -7,7 +7,7 @@
 	<packaging>rpm</packaging>
 	<name>Participant-D</name>
 	<description>SEADAS with climatological ancillary data</description>
-	<version>0.1</version>
+	<version>0.2-SNAPSHOT</version>
 
 
 	<scm>
