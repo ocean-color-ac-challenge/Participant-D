@@ -128,3 +128,55 @@ Invoke the application via the Dashboard with the parameters listed in the test 
 * Test pass/fail criteria
 
 All products listed in test outputs specification are generated
+
+##### Test Participant-D-03
+
+* Test Procedure
+
+Invoke the application via the Dashboard with the parameters listed in the test inputs specification
+
+* Inputs specification 
+
+| Parameter   | Value |
+|-------------|---------------------------------------------------------------------------------------------------------|
+| Data Package URL      | https://challenges.esa.int/eceo/datapackage/RRPAR/description?key=9d79148d-3e17-414b-9983-e4cef9e88ec6 |
+| Start Time   | 2002-03-01T00:00:00Z |
+| End Time     | 2012-05-09T23:59:59Z |
+| Bounding Box | -180,90,180,-90 |
+| List of POI for reflectance extraction |BOUS,43.367,7.9\|AAOT,45.314,12.508\|MOBY,20.828,-157.193 |
+| Flag to extract POI reflectances | true |
+
+* Outputs specification
+
+| Output                                                             | Size |
+|--------------------------------------------------------------------|------|
+
+* Test pass/fail criteria
+
+All products listed in test outputs specification are generated
+
+##### Test Participant-D-04
+
+* Test Procedure
+
+Invoke the application via the Dashboard with the parameters listed in the test inputs specification
+
+* Inputs specification 
+
+| Parameter   | Value |
+|-------------|---------------------------------------------------------------------------------------------------------|
+| Data Package URL      | https://challenges.esa.int/eceo/datapackage/FRSPAR/description?key=495f181f-47d3-4668-b717-d36d4a560837 |
+| Start Time   | 2002-03-01T00:00:00Z |
+| End Time     | 2012-05-09T23:59:59Z |
+| Bounding Box | -180,90,180,-90 |
+| List of POI for reflectance extraction |CHINA,27,122\|CHINA2,30,124\|CHINA3,22,126 |
+| Flag to extract POI reflectances | true |
+
+* Outputs specification
+
+| Output                                                             | Size |
+|--------------------------------------------------------------------|------|
+
+* Test pass/fail criteria
+
+All products listed in test outputs specification are generated
