@@ -78,6 +78,17 @@ EOF
   ${PATH_TO_SEADAS}/bin/pconvert.sh --outdir ${myOutput} ${l2output} 
   [ $? -ne 0 ] && exit ${ERR_PCONVERT}
 
+  # create RGB quicklook
+  outputname=$( basename ${l2output} | sed 's#\.dim##g' )
+  ${PATH_TO_SEADAS}/bin/pconvert.sh \
+    -f png \
+    -p ${_CIOP_APPLICATION_PATH}/seadas/etc/profile.rgb \
+    -o ${myOutput} \
+    ${myOutput}/${outputname}.dim
+
+  ciop-log "INFO" "Publishing png"
+  ciop-publish -m ${myOutput}/${outputname}.png
+
   [ "${pixex}" == "true" ] && {
     # get the POIs
     echo -e "Name\tLatitude\tLongitude" > ${TMPDIR}/poi.csv
