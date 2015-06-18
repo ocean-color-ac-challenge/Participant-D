@@ -39,60 +39,93 @@ Enter to keep the current selection[+], or type selection number:
 
 Select java 1.7 out of the menu options by typing the correct number (here it's *3*).
 
-* Install this application
-
-You can install the application in two ways, via mvn or via rpm
-
-* install via mvn
-
-Log on the developer sandbox and run these commands in a shell:
+* Install the application from github
 
 ```bash
-sudo yum -y install seadas
-git clone git@github.com:ocean-color-ac-challenge/seadas-meris-ac.git
-cd seadas-meris-ac
+cd
+git clone git@github.com:ocean-color-ac-challenge/Participant-D.git
+cd Participant-D
 mvn install
 ```
 
-This will install the seadas-meris-ac application and the SeaDAS processor from NASA.
-
-* Download and install via rpm
-
-Click on the latest release available in the releases page, then copy the file to your sandbox:
+* Install the application from rpm
 
 ```bash
-scp seadas-meris-ac-0.1-ciop.noarch.rpm <your sandbox ip>:
-```
-Log on the developer sandbox and run this command in a shell:
-
-```bash
-sudo yum -y install seadas-meris-ac
+curl -L -O https://github.com/ocean-color-ac-challenge/Participant-D/releases/download/v1.0/Participant-D-1.0-ciop.noarch.rpm
+sudo yum -y install Participant-D-1.0-ciop.noarch.rpm
 ```
 
-#### Submitting the workflow
+### <a name="submit"></a>Submitting the workflow
+
+* Via the Sandbox shell 
 
 Run this command in a shell:
 
 ```bash
-ciop-simwf
+ciop-run
 ```
 
-Or invoke the Web Processing Service via the Sandbox dashboard providing a start/stop date in the format YYYY/MM/DD (e.g. 2012-04-01 and 2012-04-03), the bounding box (upper left lat/lon, lower right lat/lon) and the par (input param file) location.
+* Via the Web Processing Service dashboard tab
 
-### Community and Documentation
+Use your browser to go to the Sandbox dashboard tab at the address http://<sandbox ip>/dashboard
 
-To learn more and find information go to 
+Click on the _Invoke_ tab
 
-* [Developer Cloud Sandbox](http://docs.terradue.com/developer-sandbox) service 
+Below the "Process List" click on _Participant D_
 
-### Authors (alphabetically)
+Fill the parameters and click submit. 
 
-* Fabrice Brito
-* Fabio D'Andria
-* Samantha Lavender 
- 
-### License
+### <a name="test"></a>Test the application
 
-Copyright 2014 Terradue Srl
+##### Test Participant-D-01
 
-Licensed under the Apache License, Version 2.0: http://www.apache.org/licenses/LICENSE-2.0
+* Test Procedure
+
+Invoke the application via the Dashboard with the parameters listed in the test inputs specification
+
+* Inputs specification 
+
+| Parameter   | Value |
+|-------------|---------------------------------------------------------------------------------------------------------|
+| Data Package URL      | https://challenges.esa.int/eceo/datapackage/RRPAR/description?key=9d79148d-3e17-414b-9983-e4cef9e88ec6 |
+| Start Time   | 2002-03-01T00:00:00Z |
+| End Time     | 2012-05-09T23:59:59Z |
+| Bounding Box | -180,90,180,-90 |
+| List of POI for reflectance extraction |BOUS,43.367,7.9\|AAOT,45.314,12.508\|MOBY,20.828,-157.193 |
+| Flag to extract POI reflectances | false |
+
+* Outputs specification
+
+| Output                                                             | Size |
+|--------------------------------------------------------------------|------|
+
+* Test pass/fail criteria
+
+All products listed in test outputs specification are generated
+
+##### Test Participant-D-02
+
+* Test Procedure
+
+Invoke the application via the Dashboard with the parameters listed in the test inputs specification
+
+* Inputs specification 
+
+| Parameter   | Value |
+|-------------|---------------------------------------------------------------------------------------------------------|
+| Data Package URL      | https://challenges.esa.int/eceo/datapackage/FRSPAR/description?key=495f181f-47d3-4668-b717-d36d4a560837 |
+| Start Time   | 2002-03-01T00:00:00Z |
+| End Time     | 2012-05-09T23:59:59Z |
+| Bounding Box | -180,90,180,-90 |
+| List of POI for reflectance extraction |BOUS,43.367,7.9\|AAOT,45.314,12.508\|MOBY,20.828,-157.193 |
+| Flag to extract POI reflectances | false |
+
+* Outputs specification
+
+| Output                                                             | Size |
+|--------------------------------------------------------------------|------|
+
+* Test pass/fail criteria
+
+All products listed in test outputs specification are generated
+
