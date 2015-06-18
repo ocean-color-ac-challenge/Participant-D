@@ -117,7 +117,7 @@ Invoke the application via the Dashboard with the parameters listed in the test 
 | Start Time   | 2002-03-01T00:00:00Z |
 | End Time     | 2012-05-09T23:59:59Z |
 | Bounding Box | -180,90,180,-90 |
-| List of POI for reflectance extraction |BOUS,43.367,7.9\|AAOT,45.314,12.508\|MOBY,20.828,-157.193 |
+| List of POI for reflectance extraction |CHINA,27,122\|CHINA2,30,124\|CHINA3,22,126 |
 | Flag to extract POI reflectances | false |
 
 * Outputs specification
