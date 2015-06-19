@@ -208,3 +208,21 @@ MER_FRS_1PPEPA20040717_021529_000002642028_00361_12439_1968.dim.txt|1.74 KB|
 * Test pass/fail criteria
 
 All products listed in test outputs specification are generated
+
+### Community and Documentation
+
+To learn more and find information go to 
+
+* [Developer Cloud Sandbox](http://docs.terradue.com/developer-sandbox) service 
+
+### Authors (alphabetically)
+
+* Fabrice Brito
+* Fabio D'Andria
+* Samantha Lavender 
+ 
+### License
+
+Copyright 2015 Terradue Srl
+
+Licensed under the Apache License, Version 2.0: http://www.apache.org/licenses/LICENSE-2.0
