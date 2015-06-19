@@ -56,7 +56,18 @@ do
   #getting the input
   ciop-log "INFO" "Working with MERIS product ${input}"
 
-  n1input=$( ciop-copy -o ${myInput} ${input} )
+  case "${input:0:4}" in
+    "file"|"s3:/")
+      n1input="$( echo "${input}" | ciop-copy -o "${myInput}" - )"
+    ;;
+    "http")
+      n1input="$( opensearch-client "$input" enclosure | ciop-copy -o ${myInput} - )"
+    ;;
+    *)
+      exit $ERR_NOINPUT
+    ;;
+  esac
+
   [ $? -ne 0 ] && exit ${ERR_NOINPUT}
   
   #preparing the processor run
