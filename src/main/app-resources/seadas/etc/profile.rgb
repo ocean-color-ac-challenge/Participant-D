@@ -1,0 +1,3 @@
+blue=not l2_flags.LAND ? log(0.05 + 0.21 * Rrs_413 + 1.75 * Rrs_443 + 0.47 * Rrs_490 + 0.16 * Rrs_510) : 0
+green=not l2_flags.LAND ? log(0.05 + 0.21 * Rrs_490 + 0.50 * Rrs_510 + Rrs_560 + 0.38 * Rrs_620) : 0
+red=not l2_flags.LAND ? log(0.05 + 0.35 * Rrs_443 + 0.60 * Rrs_560 + Rrs_620 + 0.13 * Rrs_665) : 0
