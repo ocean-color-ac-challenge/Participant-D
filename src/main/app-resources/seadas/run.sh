@@ -47,8 +47,9 @@ myInput="${TMPDIR}/input"
 myOutput="${TMPDIR}/output"
 mkdir -p ${myInput} ${myOutput}
 
-pixex=$( ciop-getparam "pixex" )
-par=$( ciop-getparam "par" )
+pixex="$( ciop-getparam pixex )"
+par="$( ciop-getparam par )"
+publish_l2="$( ciop-getparam publish_l2 )"
 
 while read input
 do
