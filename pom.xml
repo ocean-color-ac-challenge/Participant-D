@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.terradue.ciop.app</groupId>
-	<artifactId>Participant-D</artifactId>
+	<artifactId>participant-d</artifactId>
 	<packaging>rpm</packaging>
 	<name>Participant-D</name>
 	<description>SEADAS with climatological ancillary data</description>
