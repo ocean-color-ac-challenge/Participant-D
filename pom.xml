@@ -6,7 +6,7 @@
   <packaging>rpm</packaging>
   <name>Participant-D</name>
   <description>SEADAS with climatological ancillary data</description>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.1-SNAPSHOT</version>
   <scm>
     <connection>scm:git:git@github.com:ocean-color-ac-challenge/Participant-D.git</connection>
     <developerConnection>scm:git:git@github.com:ocean-color-ac-challenge/Participant-D.git</developerConnection>
